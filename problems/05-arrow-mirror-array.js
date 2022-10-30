@@ -12,6 +12,10 @@ arrowMirrorArray(['a', 'b', 'c', 'd']); // => [ 'a', 'b', 'c', 'd', 'd', 'c', 'b
 
 // arrow function
 const arrowMirrorArray = (array) => {
+  /* slight alteration so that it pushes to new array 
+  the method below in the for loop would work for a new array or the same array
+  just change the push line and return line if you want it to mirror the same array 
+  */
   const newArray=array;
   // loop from the end of the array
   for (let i=array.length-1; i>=0; i--){
