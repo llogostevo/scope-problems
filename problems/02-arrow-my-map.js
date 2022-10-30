@@ -20,6 +20,25 @@ console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 
 // your code here!
 
+/* initial attempt using indexes and for loop
+arrowMyMap = (array, callback) => {
+  let newArray = []
+  for (let i=0; i<array.length; i++){
+    newArray.push(callback(array[i]));
+  }
+  return newArray;
+};
+*/
+
+
+// second attempt using for each 
+arrowMyMap = (array, callback) => {
+  let newArray = []
+  array.forEach(element => newArray.push(callback(element)));
+  return newArray;
+};
+
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

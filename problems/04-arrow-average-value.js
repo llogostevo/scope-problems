@@ -10,7 +10,16 @@ arrowAvgValue([2, 3, 7]); // => 4
 arrowAvgValue([100, 60, 64]); // => 74.66666666666667
 ***********************************************************************/
 
-// your code here!
+
+//arrow function
+const arrowAvgValue = (array) =>{
+  // calculate total using reduce method on array
+  total = array.reduce((accumulator, element) => accumulator + element);
+  // average = total of array elements / number in array
+  return total / array.length;
+
+};
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
