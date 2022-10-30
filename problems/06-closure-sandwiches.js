@@ -17,7 +17,26 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
 
-// your code here!
+function sandwichMaker() {
+  let order = ["One sandwich with tomato"]
+  // callback as as return
+  return ((string) => {
+    // push the string value onto the outter function array order
+      order.push(string);
+
+      // return the order as one string
+      return order.join(" and ");
+
+  });
+}
+
+let sandwich = sandwichMaker(); // => returns a function
+sandwich("spinach") // => "One sandwich with tomato and spinach"
+sandwich("jelly") // => "One sandwich with tomato and spinach and jelly"
+sandwich("bread") // => "One sandwich with tomato and spinach and jelly and bread"
+
+let sandwich2 = sandwichMaker(); // => returns a function
+sandwich2("pb") // => "One sandwich with tomato and pb"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

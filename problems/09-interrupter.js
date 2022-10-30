@@ -16,7 +16,20 @@ console.log(rudePerson2("I love dogs")); // prints "I yo love yo dogs"
 
 ***********************************************************************/
 
-// your code here!
+const interrupter = (interruptingWord) => {
+
+  return((sentence) => {
+    // split the sentence into an array of words
+    let words = sentence.split(" ");
+    // reduce the array of words into a single string using the interupt between each word
+    const result = words.reduce((previousElement, element)=> previousElement+" "+interruptingWord+" "+element);
+    return result;
+  });
+};
+
+let rudePerson = interrupter("what"); // => returns a function
+console.log(rudePerson("how are you")); // prints "how what are what you"
+console.log(rudePerson("I like pie")); // prints "I what like what pie"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

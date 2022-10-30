@@ -22,7 +22,23 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   fat-arrow function
 ***********************************************************************/
 
-// your code here
+// attempt 1
+/*
+const lazyAdder = (number) => {
+  let total = number;
+return ((secondNum) =>{
+  total = total +secondNum;
+  return ((thirdNum) =>{
+    total = total +thirdNum;
+    return total;
+  
+  })
+}); 
+};
+*/
+
+/* attempt at one big arrow function, not really what is asked for */ 
+const lazyAdder = (number) => {return ((secondNum) =>{number = number+secondNum;return ((thirdNum) =>{return number +thirdNum;})});};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

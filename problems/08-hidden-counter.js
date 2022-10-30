@@ -15,7 +15,19 @@ hidden2(); // returns 1
 
 ***********************************************************************/
 
-// your code here!
+const hiddenCounter = () => {
+  // set counter variable
+  let count = 0; 
+
+  // return function to count each time function is run
+  return () =>{
+    // increment the count after outter function is run
+    count++
+    // return current value of the count
+    return count;
+  }  
+};
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

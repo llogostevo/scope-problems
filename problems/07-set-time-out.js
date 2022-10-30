@@ -18,7 +18,14 @@ funcTimer(5000, partyFunc); // in 5 seconds prints: "Party time!"
 
 ***********************************************************************/
 
-// your code here!
+// arrow function expression for timer
+
+const funcTimer = (time, func) => {
+  // return the timeout to include the function be called
+  return setTimeout(func, time); 
+};
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
