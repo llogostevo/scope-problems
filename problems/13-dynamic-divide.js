@@ -18,7 +18,17 @@ divideByFive(50); // returns 10
 
 ***********************************************************************/
 
-// your code here
+// dynamic divide v1
+
+let dynamicDivide_v1 = (divisor) =>{
+  return ( (argument) =>{
+    return argument/divisor;
+  })};
+
+// dynamic divide v2 simplified
+// divisor is the 1st argument, then from this you can create new functions
+// each new function allows you to create your own divisor functions 
+  let dynamicDivide = divisor =>argument =>argument/divisor;
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
