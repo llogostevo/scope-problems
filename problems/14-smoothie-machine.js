@@ -24,6 +24,35 @@ console.log(smoothie2("pineapple"));
 
 // your code here
 
+let smoothieMachine = (...theArgs) =>{
+  let smoothieString;
+  if (theArgs.length===0){
+     smoothieString = "I'm having a smoothie with ";
+  } else {
+     smoothieString = "I'm having a smoothie with "+theArgs.join(' and ');
+  }
+  return ( (...theNewArgs)=>{
+    if (smoothieString=="I'm having a smoothie with "){
+      smoothieString = smoothieString+theNewArgs.join(' and ');
+    } else{
+      smoothieString = smoothieString+" and "+theNewArgs.join(' and ');
+    }
+  return smoothieString;
+  });
+};
+
+  let smoothie1 = smoothieMachine();
+
+console.log(smoothie1("milk"));
+// prints "I'm having a smoothie with milk"
+console.log(smoothie1("kale", "spinach"));
+// prints "I'm having a smoothie with milk and kale and spinach"
+console.log(smoothie1("honey", "pears", "berries"));
+// prints "I'm having a smoothie with milk and kale and spinach and honey and pears and berries"
+
+let smoothie2 = smoothieMachine("apples", "bananas", "berries");
+console.log(smoothie2("pineapple"));
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = smoothieMachine;

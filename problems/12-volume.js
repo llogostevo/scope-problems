@@ -24,13 +24,17 @@ console.log(table2(75)); // STILL prints 6
 
 ***********************************************************************/
 
-// your code here
+// closure to calculate volume using a counter to keep track of arguments passed in
 let recVolume = (x) => {
+  // pass the value x into the volume
   let volume = x;
+  // define a counter to keep track of the number of elements passed in
   let count = 0;
   
   return function(x){
+    // increment the counter
     count= count+1
+    // only recalculate the volume if the number of elements passed in is less than 3. 
     if (count<3){
       volume = volume*x;
       return (volume);
