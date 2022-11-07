@@ -15,7 +15,22 @@ console.log(fame(["a", "f", "z", "b"])); // returns [ 'f', 'a' ]
 
 *******************************************************************************/
 
-// your code here
+
+let plannedIntersect = firstArr => {
+  return(secondArr => {
+    let newArray = [];
+    // check if element of first array matches element in second array and push to newArray if it does
+    for (let i=0; i<firstArr.length; i++){
+      for(let j=0; j<secondArr.length; j++){
+        if (firstArr[i] == secondArr[j]){
+          newArray.push(firstArr[i])
+        }
+      }
+      
+    }
+    return newArray;
+  });
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 
