@@ -26,6 +26,22 @@ Example 3:
 ***********************************************************************/
 
 // your code here
+let coinCollector = (numCoins) => {
+  // set the coinLength
+  let coinLength = numCoins;
+  // set an array to collect coins
+  let coinArray = []
+  return ( (coin) => {
+    // add new coin to the coin array
+    coinArray.push(coin);
+
+    // check if the coin array is full and return if it is
+    if (coinArray.length == coinLength){
+      return coinArray;
+    }
+
+  })
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
