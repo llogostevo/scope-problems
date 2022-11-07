@@ -44,6 +44,60 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 
 // your code here
 
+//Define an empty array, `numbers`.
+
+//- Define a function, `_curriedSum` that:
+// let curriedSum = (numArgs) => {
+//     numbers = numbers;
+//   //Takes a single number as an argument.
+//   return ( (number) =>{
+//     //Appends this to the `numbers` array each time.
+//     numbers.push(number);
+//     //If `numbers.length === numArgs`, it sums the numbers in the array and
+//     //returns the result.
+//     if (numbers.length === numArgs){
+//       return numbers.reduce((previousValue, currentValue) => previousValue + currentValue);
+//     } else {
+//       //Else, it returns itself.
+//       return curriedSum;
+//     }
+//   });
+
+// };
+
+// Here is a breakdown of how curriedSum(numArgs) should work:
+let curriedSum = (numArgs) => {
+//     - Define an empty array, `numbers`.
+let numbers = [];
+//     - Define a function, `_curriedSum` that:
+//         - Closes over `numArgs` and `numbers`.
+//         - Takes a single number as an argument.
+ let _curriedSum =(number)=>{
+            numbers.push(number);
+//         - Appends this to the `numbers` array each time.
+//         - If `numbers.length === numArgs`, it sums the numbers in the array and
+            if (numbers.length === numArgs){
+              return numbers.reduce((previousValue, currentValue) => previousValue + currentValue);
+            } else {
+              //Else, it returns itself.
+              return _curriedSum;
+            }
+
+ };
+ return _curriedSum;
+
+}
+
+//     - Define a function, `_curriedSum` that:
+//         - Closes over `numArgs` and `numbers`.
+//         - Takes a single number as an argument.
+//         - Appends this to the `numbers` array each time.
+//         - If `numbers.length === numArgs`, it sums the numbers in the array and
+//         returns the result.
+//         - Else, it returns itself.
+//     - Returns `_curriedSum`.
+
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
