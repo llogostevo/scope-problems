@@ -12,8 +12,12 @@ let result3 = arrowReverseString("potato"); // returns "otatop"
 
 ***********************************************************************/
 
-// your code here!
+/* split the string into an array
+reverse the array and then rejoin the array back into a string
+this is one arrow function so it doesn't need a return as return is implied. 
+*/
 
+let arrowReverseString = str => str.split("").reverse().join("");
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 
 try {
