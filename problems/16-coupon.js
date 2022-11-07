@@ -15,7 +15,18 @@ console.log(twentyPercent([10, 20, 30])); // [ 8, 16, 24 ]
 
 ***********************************************************************/
 
-// your code here!
+// first version - long hand way of writing the function
+let coupon_v1 = (discount) => {
+
+  return ((prices) =>{
+    // for each price in the prices map and replace the element with the discount calculation
+    return prices.map(price => price -(price*discount))
+
+  });
+};
+
+// this is the shorthand way of writing the function
+let coupon = discount => prices => prices.map(price => price -(price*discount));
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
