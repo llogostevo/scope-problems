@@ -42,29 +42,6 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   be useful
 ***********************************************************************/
 
-// your code here
-
-//Define an empty array, `numbers`.
-
-//- Define a function, `_curriedSum` that:
-// let curriedSum = (numArgs) => {
-//     numbers = numbers;
-//   //Takes a single number as an argument.
-//   return ( (number) =>{
-//     //Appends this to the `numbers` array each time.
-//     numbers.push(number);
-//     //If `numbers.length === numArgs`, it sums the numbers in the array and
-//     //returns the result.
-//     if (numbers.length === numArgs){
-//       return numbers.reduce((previousValue, currentValue) => previousValue + currentValue);
-//     } else {
-//       //Else, it returns itself.
-//       return curriedSum;
-//     }
-//   });
-
-// };
-
 // Here is a breakdown of how curriedSum(numArgs) should work:
 let curriedSum = (numArgs) => {
 //     - Define an empty array, `numbers`.
