@@ -18,7 +18,17 @@ multiplyByFive(5); // returns 25
 
 ***********************************************************************/
 
-// your code here!
+// dynamicMultiply v1 - long hand using arrow functions
+let dynamicMultiply_v1 = (num) =>{
+  let multiplier = num;
+
+  return( (multiple) =>{
+    return multiple*multiplier;
+  });
+};
+
+// altered the above into one condensed line of a nested arrow function
+let dynamicMultiply = multiplier => multiple => multiple*multiplier;
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
